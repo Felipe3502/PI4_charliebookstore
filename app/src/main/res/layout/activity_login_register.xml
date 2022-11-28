@@ -34,7 +34,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-
             android:fontFamily="@font/poppins_thin"
             android:text="Insira o seu Login"
             android:textAlignment="center"
@@ -97,7 +96,7 @@
 
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/buttonLoginLogin"
+            android:id="@+id/buttonLoginLoginRegister"
             style="@style/Button"
             android:layout_marginTop="10dp"
             android:text="Login"
@@ -115,9 +114,8 @@
             android:layout_marginTop="20dp"
             android:background="@color/white"
             android:src="@drawable/facebook_login"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView"
             app:layout_constraintStart_toStartOf="@+id/guideLoginLeft"
-            app:layout_constraintTop_toBottomOf="@id/buttonLoginLogin" />
+            app:layout_constraintTop_toBottomOf="@+id/buttonLoginLoginRegister" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -130,6 +128,26 @@
             app:layout_constraintEnd_toEndOf="@id/facebookLogin"/>
 
 
+        <ImageView
+            android:id="@+id/googleLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/white"
+            android:src="@drawable/google_login"
+            app:layout_constraintEnd_toEndOf="@+id/guideLoginRight"
+            app:layout_constraintTop_toBottomOf="@+id/buttonLoginLoginRegister"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Google"
+            app:layout_constraintStart_toStartOf="@+id/googleLogin"
+            app:layout_constraintTop_toTopOf="@+id/googleLogin"
+            app:layout_constraintTop_toBottomOf="@+id/googleLogin"
+            app:layout_constraintEnd_toEndOf="@+id/googleLogin"/>
 
 
         <androidx.constraintlayout.widget.Guideline
