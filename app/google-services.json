@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "102502672577",
+    "firebase_url": "https://charliebookstore-ae709-default-rtdb.firebaseio.com",
+    "project_id": "charliebookstore-ae709",
+    "storage_bucket": "charliebookstore-ae709.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:102502672577:android:2b7bcabd9a3a03f1bd0c40",
+        "android_client_info": {
+          "package_name": "com.example.charliebookstore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "102502672577-8ctakl3vrt1f22ue4fa2kiupn0h179jm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9BOsX85X5MUdhdzoWMsr6jk2RKwy8KUo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "102502672577-8ctakl3vrt1f22ue4fa2kiupn0h179jm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
