@@ -34,6 +34,10 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
@@ -67,12 +71,7 @@ dependencies {
     //Android Ktx
     implementation 'androidx.navigation:navigation-fragment-ktx:2.4.2'
 
-    //Dagger hilt
-    implementation "com.google.dagger:hilt-android:2.38.1"
-    kapt "com.google.dagger:hilt-compiler:2.38.1"
-
     apply plugin :"kotlin-kapt"
-
 
     //Firebase
     implementation 'com.google.firebase:firebase-auth:21.1.0'
@@ -81,4 +80,8 @@ dependencies {
     def lifecycle_version = "2.4.0"
     implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+
+    def hilt_version="2.44"
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-compiler:$hilt_version"
 }
