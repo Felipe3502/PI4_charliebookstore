@@ -1,5 +1,7 @@
 package com.example.charliebookstore.di
 
+import android.app.Application
+import android.content.Context.MODE_PRIVATE
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
@@ -22,4 +24,9 @@ object AppModule {
     @Provides
     @Singleton
     fun provideFirebaseFirestoreDatabase() = Firebase.firestore
+
+    //@Provides
+   // fun provideIntroductionSP(
+    //    application: Application
+   // ) = application.getSharedPreferences(, MODE_PRIVATE)
 }
