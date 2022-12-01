@@ -12,9 +12,13 @@ import androidx.lifecycle.lifecycleScope
 import com.example.charliebookstore.R
 import com.example.charliebookstore.data.User
 import com.example.charliebookstore.databinding.FragmentRegisterBinding
+import com.example.charliebookstore.util.RegisterValidation
 import com.example.charliebookstore.util.Resource
 import com.example.charliebookstore.viewmodel.RegisterViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.withContext
 
 private val TAG = "RegisterFragment"
 @AndroidEntryPoint
@@ -65,6 +69,27 @@ class RegisterFragment: Fragment(R.layout.fragment_register) {
                 }
             }
         }
-    }
 
+        lifecycleScope.launchWhenStarted {
+            viewModel.validation.collect{ validation ->
+                if (validation.email is RegisterValidation.Failed){
+                    withContext(Dispatchers.Main){
+                        binding.edEmailRegister.apply {
+                            requestFocus()
+                            error = validation.email.message
+                        }
+                    }
+                }
+
+                if (validation.password is RegisterValidation.Failed){
+                    withContext(Dispatchers.Main){
+                        binding.edPasswordRegister.apply {
+                            requestFocus()
+                            error = validation.password.message
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
