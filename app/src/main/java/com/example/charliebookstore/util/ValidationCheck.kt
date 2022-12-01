@@ -7,7 +7,7 @@ fun validateEmail(email: String): RegisterValidation{
     if (email.isEmpty())
         return RegisterValidation.Failed("O campo de E-mail está vazio")
 
-    if (Patterns.EMAIL_ADDRESS.matcher(email).matches())
+    if (Patterns.EMAIL_ADDRESS.matcher(email).equals(email))
         return RegisterValidation.Failed("Formato de e-mail incorreto")
 
     return  RegisterValidation.Success
