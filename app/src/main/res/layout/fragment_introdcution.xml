@@ -44,7 +44,7 @@
         app:layout_constraintTop_toBottomOf="@+id/logo" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btcomecar"
+        android:id="@+id/buttonStart"
         style="@style/Button"
         android:text="Começar"
         app:layout_constraintBottom_toBottomOf="parent"

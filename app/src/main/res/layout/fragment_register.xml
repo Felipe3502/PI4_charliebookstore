@@ -32,7 +32,7 @@
             style="@style/h4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="1dp"
 
             android:fontFamily="@font/poppins_thin"
             android:text="Crie uma Conta"
@@ -41,14 +41,28 @@
             app:layout_constraintStart_toStartOf="@+id/logo"
             app:layout_constraintTop_toBottomOf="@+id/logo" />
 
+        <TextView
+            android:id="@+id/tvYouHaveAccount"
+            style="@style/h2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/poppins_thin"
+            android:text="Clique aqui se já tem uma conta"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/LestsGoRegister"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/LestsGoRegister"
+            app:layout_constraintTop_toBottomOf="@+id/LestsGoRegister" />
+
         <EditText
             android:id="@+id/edFirstNameRegister"
             android:layout_width="0dp"
             android:layout_height="@dimen/edittextHeight"
             app:layout_constraintEnd_toEndOf="@id/guideLoginRight"
             app:layout_constraintStart_toStartOf="@id/guideLoginLeft"
-            app:layout_constraintTop_toBottomOf="@+id/LestsGoRegister"
-            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvYouHaveAccount"
+            android:layout_marginTop="8dp"
             style="@style/editText"
             android:hint="Primeiro Nome"
             android:inputType="textEmailAddress"
@@ -109,7 +123,7 @@
             android:id="@+id/facebookLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="40dp"
             android:layout_marginLeft="15dp"
             android:background="@color/white"
             android:src="@drawable/facebook_login"
@@ -131,7 +145,7 @@
             android:id="@+id/googleLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="40dp"
             android:layout_marginRight="15dp"
             android:background="@color/white"
             android:src="@drawable/google_login"
